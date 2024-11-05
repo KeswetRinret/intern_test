@@ -3,11 +3,14 @@ import futureImg from '../public/images/futureImg.png'
 import img1 from '@/public/images/img1.png'
 import img2 from '@/public/images/img2.png'
 import img3 from '@/public/images/img3.png'
+import { Inter } from 'next/font/google';
 
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Future() {
   return (
-    <div className={'flex flex-col lg:flex-row items-center justify-between p-8 bg-white'}>
+    <div className= {`${inter.className} flex flex-col lg:flex-row items-center justify-between p-8 bg-white`}>
       <div className="lg:w-1/2 space-y-4 mx-8">
         <h1 className="text-3xl font-bold text-gray-900">
           Unlock the Future of Shopping with Us!

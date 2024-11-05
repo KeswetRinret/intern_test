@@ -1,7 +1,11 @@
+import { Inter } from 'next/font/google';
 import React from 'react';
 import { FaDiscord } from 'react-icons/fa';
 import { IoLogoYoutube } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
+
+
+const inter = Inter({ subsets: ["latin"] });
 
 const footerSections = [
   {
@@ -32,7 +36,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <div className='parent bg-[#172755]'>
+    <div className={`${inter.className} parent bg-[#172755] pt-2 md:pt-2 lg:pt-2 pb-2 md:pb-4 lg:pb-2`}>
       <div className="w-[90%] mx-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {footerSections.map((section, idx) => (
           <div key={idx} className="space-y-4 ml-10 md:ml-8">
